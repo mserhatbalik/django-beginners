@@ -1,1 +1,1 @@
-Django Projects for Learning
+Django Projects for Learning.
