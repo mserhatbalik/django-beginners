@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description"
-              content="A brief, engaging summary of your webpage goes here.">
-        <meta name="keywords" content="company, aerospace, artificial intelligence">
-        <title>Company Website</title>
-    </head>
-    <body>
-        <h1>Company Website</h1>
-        <p>The current date and time is: {% now "DATETIME_FORMAT" %}</p>
-        <p>There are {{ inventory_list|length }} items of inventory.</p>
-        <ul>
-            {% for item in inventory_list %}<li>{{ item }}</li>{% endfor %}
-        </ul>
-        <p>{{ greeting|upper }}</p>
-        {% comment %}
+{% extends "base.html" %}
+{% block content %}
+    <h1>Company Website</h1>
+    <p>The current date and time is: {% now "DATETIME_FORMAT" %}</p>
+    <p>There are {{ inventory_list|length }} items of inventory.</p>
+    <ul>
+        {% for item in inventory_list %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+    <p>{{ greeting|upper }}</p>
+    {% comment %}
         Add more comment here!    
-        {% endcomment %}
-    </body>
-</html>
+    {% endcomment %}
+{% endblock content %}
