@@ -20,3 +20,4 @@ class AboutPageView(TemplateView):
         context["contact_address"] = "123 Main Street"
         context["phone_number"] = "555-555-5555"
         return context
+
