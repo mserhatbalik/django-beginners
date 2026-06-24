@@ -16,3 +16,6 @@ class Post(models.Model):
 
     def get_edit_url(self):
         return reverse("post_edit", kwargs={"pk": self.pk})
+
+    def get_delete_url(self):
+        return reverse("post_delete", kwargs={"pk": self.pk})
