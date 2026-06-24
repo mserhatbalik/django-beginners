@@ -13,3 +13,6 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse("post_detail", kwargs={"pk": self.pk})
+
+    def get_edit_url(self):
+        return reverse("post_edit", kwargs={"pk": self.pk})
